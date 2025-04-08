@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useAppContext } from '@/lib/app-context';
 import { 
@@ -19,7 +18,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 
 export function AppHeader() {
   const { isDarkMode, setIsDarkMode, language, setLanguage, selectedCurrency, setSelectedCurrency, currencies } = useAppContext();

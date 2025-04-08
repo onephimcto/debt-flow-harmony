@@ -1,8 +1,7 @@
-
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { debts, parties, currencies, transactions, userStats } from './mock-data';
 import { useToast } from '@/hooks/use-toast';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 
 type AppContextType = {
   language: 'en' | 'vn';

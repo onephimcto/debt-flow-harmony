@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calendar } from '@/components/ui/calendar';
 import { useAppContext } from '@/lib/app-context';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 
 const CalendarPage = () => {
   const { debts } = useAppContext();

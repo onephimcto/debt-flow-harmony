@@ -7,11 +7,11 @@ import { cn } from '@/lib/utils';
 export function RecentActivity() {
   const { debts, transactions, selectedCurrency } = useAppContext();
 
-  // Combine debts and transactions for activity feed
+  // Combine debts and transactions for activity feed, with proper type discrimination
   const activities = [
     ...debts.map(debt => ({
       id: debt.id,
-      type: 'debt',
+      type: 'debt' as const,
       title: debt.status === 'owes_me' ? `${debt.partyName} owes you` : `You owe ${debt.partyName}`,
       amount: debt.amount,
       currency: debt.currency,
@@ -21,7 +21,7 @@ export function RecentActivity() {
     })),
     ...transactions.map(transaction => ({
       id: transaction.id,
-      type: 'payment',
+      type: 'payment' as const,
       title: `Payment received`,
       amount: transaction.amount,
       currency: transaction.currency,

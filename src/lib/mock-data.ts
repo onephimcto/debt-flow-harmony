@@ -1,4 +1,3 @@
-
 import { 
   Calendar,
   Users,
@@ -7,7 +6,7 @@ import {
   Settings,
   HelpCircle,
   Home,
-  receipt,
+  Receipt, // Fixed: Changed 'receipt' to 'Receipt' (proper capitalization)
 } from "lucide-react";
 
 export type Currency = {
@@ -215,7 +214,7 @@ export const navItems: NavItem[] = [
   {
     title: "Debts",
     href: "/debts",
-    icon: receipt,
+    icon: Receipt, // Fixed: Changed 'receipt' to 'Receipt'
   },
   {
     title: "Parties",
